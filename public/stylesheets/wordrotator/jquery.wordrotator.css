@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+.wordsrotator_words {
+	display: inline-block;
+	position: relative;
+	white-space:nowrap;
+    -webkit-transition: width 1s;
+    -moz-transition: width 1s;
+    -o-transition: width 1s;
+    transition: width 1s;	
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.wordsrotator_words .wordsrotator_wordOut, .wordsrotator_words .wordsrotator_wordIn {
+	position: relative;
+	display: inline-block;
+	-webkit-animation-name: pulse;
+	  animation-name: pulse;
+}
+.wordsrotator_words .wordsrotator_wordOut {
+	left: 0;
+	top: 0;
+	position: absolute;
+	display: inline-block;
+	
+}
+.wordsrotator_words .wordsrotator_wordOut span {
+	width: auto;
+	position: relative;
+}
+.wordsrotator_words .wordsrotator_wordIn {
+	opacity: 0;
+}
+
