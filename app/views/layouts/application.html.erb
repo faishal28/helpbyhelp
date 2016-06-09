@@ -2,10 +2,10 @@
 <html>
 <head>
   <title><%= title %></title>
+	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-  <%= csrf_meta_tags %>
+	<%= csrf_meta_tags %>
 	<%= render 'layouts/stylesheets' %>
 	<link rel="shortcut icon" href="favicon.ico"/>
 	<%= javascript_include_tag "application" %>
@@ -14,99 +14,5 @@
 <%= render 'layouts/header' %>
 <%= yield %>
 <%= render 'layouts/footer' %>
-<div class="c-layout-go2top">
-	<i class="icon-arrow-up"></i>
-</div>
-<script>
-	$(document).ready(function() {
-		$('.ui.dropdown')
-        .dropdown({
-          on: 'click'
-        })
-      ;
-			
-			$('.special.card .image').dimmer({
-			        on: 'hover'
-			      });
-			      $('.star.rating')
-			        .rating()
-			      ;
-			      $('.card .dimmer')
-			        .dimmer({
-			          on: 'hover'
-			        })
-			      ;
-						
-		$('.ui.form')
-		        .form({
-		          fields: {
-		            email: {
-		              identifier  : 'email',
-		              rules: [
-		                {
-		                  type   : 'empty',
-		                  prompt : 'Please enter your e-mail'
-		                },
-		                {
-		                  type   : 'email',
-		                  prompt : 'Please enter a valid e-mail'
-		                }
-		              ]
-		            },
-		            password: {
-		              identifier  : 'password',
-		              rules: [
-		                {
-		                  type   : 'empty',
-		                  prompt : 'Please enter your password'
-		                },
-		                {
-		                  type   : 'length[6]',
-		                  prompt : 'Your password must be at least 6 characters'
-		                }
-		              ]
-		            }
-		          }
-		        })
-		      ;
-		App.init(); // init core    
-
-		// init main slider
-		var slider = $('.c-layout-revo-slider .tp-banner');
-	    var cont = $('.c-layout-revo-slider .tp-banner-container');
-	    var api = slider.show().revolution({
-	        delay: 15000,    
-	        startwidth:1170,
-	        startheight: 620,
-	        navigationType: "hide",
-	        navigationArrows: "solo",
-	        touchenabled: "on",
-	        onHoverStop: "on",
-	        keyboardNavigation: "off",
-	        navigationStyle: "circle",
-	        navigationHAlign: "center",
-	        navigationVAlign: "bottom",
-	        spinner: "spinner2",
-	        fullScreen: "on",   
-	        fullScreenAlignForce:"on",
-	        fullScreenOffsetContainer: (App.getViewPort().width < App.getBreakpoint('md') ? '.c-layout-header' : ''),
-	        shadow: 0,
-	        fullWidth: "off",
-	        forceFullWidth: "off",
-	        hideTimerBar:"on",
-	        hideThumbsOnMobile: "on",
-	        hideNavDelayOnMobile: 1500,
-	        hideBulletsOnMobile: "on",
-	        hideArrowsOnMobile: "on",
-	        hideThumbsUnderResolution: 0
-	    });
-	    api.bind("revolution.slide.onchange",function (e,data) {
-	        $('.c-layout-header').removeClass('hide');   
-	        setTimeout(function(){
-	            $('.c-singup-form').fadeIn(); 
-	        }, 1500);
-	    });
-	});
-</script>
 </body>
 </html>

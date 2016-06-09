@@ -1,6 +1,7 @@
 module ApplicationHelper
+  
   def title
-    base_title = "AutoHangar"
+    base_title = "HelpByHelp"
     if @title.nil?
       base_title
     else
