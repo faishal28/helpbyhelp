@@ -6,12 +6,12 @@
 				</div>
 				<div class="ui horizontal inverted link list">
 				            <a href="#" class="item"><i class="socicon-btn socicon-btn-circle socicon-solid c-bg-white c-font-black c-bg-orange-hover 							socicon-twitter tooltips"></i></a>
-				            <a href="#" class="item"><i class="socicon-btn socicon-btn-circle socicon-solid c-bg-white c-font-black c-bg-orange-hover 							socicon-facebook tooltips"></i></a>
+				            <a href="https://www.facebook.com/helpbyhelpjabalpur/" target="_blank" class="item"><i class="socicon-btn socicon-btn-circle socicon-solid 							c-bg-white c-font-black c-bg-orange-hover socicon-facebook tooltips"></i></a>
 							<a href="#" class="item"><i class="socicon-btn socicon-btn-circle socicon-solid c-bg-white c-font-black c-bg-orange-hover 							socicon-google tooltips"></i></a>
 				</div>
 				  <div class="footer-links ui horizontal inverted small divided link list">
-				          <a class="item" href="#">About us</a>
-				          <a class="item" href="#">Contact Us</a>
+				          <%= link_to 'About Us', about_path, :class => 'item' %>
+						  <%= link_to 'Contact Us', contacts_path, :class => 'item' %>
 				          <a class="item" href="#">Terms and Conditions</a>
 				          <a class="item" href="#">Privacy Policy</a>
 				  </div>

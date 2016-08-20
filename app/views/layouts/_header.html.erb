@@ -20,22 +20,22 @@
 			<!-- BEGIN: MEGA MENU -->
 			<ul class="nav navbar-nav c-theme-nav">
 				<li class="c-active c-menu-type-classic">
-					<a href="<%= root_path %>" class="c-link dropdown-toggle">Home</a>
+					<%= link_to 'Home', root_path, :class => 'c-link dropdown-toggle' %>
 				</li>
 				<li class="c-menu-type-classic">
-					<a href="#" class="c-link dropdown-toggle">About</a>
+					<%= link_to 'About', about_path, :class => 'c-link dropdown-toggle' %>
 				</li>
 				<li class="c-menu-type-classic">
-					<a href="#" class="c-link dropdown-toggle">Works</a>
+					<%= link_to 'Activities', activity_path, :class => 'c-link dropdown-toggle' %>
 				</li>
 				<li class="c-menu-type-classic">
-					<a href="#" class="c-link dropdown-toggle">Gallery</a>
+					<%= link_to 'Gallery', gallery_path, :class => 'c-link dropdown-toggle' %>
 				</li>
 				<li class="c-menu-type-classic">
 					<a href="#" class="c-link dropdown-toggle">Contribute</a>
 				</li>
 				<li class="c-menu-type-classic">
-					<a href="#" class="c-link dropdown-toggle">Contacts</a>
+					<%= link_to 'Contacts', contacts_path, :class => 'c-link dropdown-toggle' %>
 				</li>
 			</ul>
 			<!-- END MEGA MENU -->
